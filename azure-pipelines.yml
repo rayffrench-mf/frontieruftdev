@@ -17,10 +17,10 @@ steps:
   displayName: 'Install Node.js'
 
 - script: |
-npm config set user 0
-npm config set unsafe-perm true
 
     npm install
+    npm config set user 0
+    npm config set unsafe-perm true
     npm run build
     npm run test
   displayName: 'npm install and build'
