@@ -23,4 +23,8 @@ steps:
     npm config set unsafe-perm true
     npm run build
     npm run test
+- task: PublishTestResults@2
+  inputs:
+    testResultsFormat: 'JUnit'
+    testResultsFiles: '**/TEST-*.xml'
   displayName: 'npm install and build'
