@@ -18,11 +18,11 @@ steps:
 
 - script: |
 
-    npm install
+    sudo npm install -g
     npm config set user 0
     npm config set unsafe-perm true
-    npm run build
-    npm run test
+    sudo npm run build
+    sudo npm run test
 - task: PublishTestResults@2
   inputs:
     testResultsFormat: 'JUnit'
