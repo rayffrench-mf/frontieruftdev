@@ -18,7 +18,6 @@ steps:
 
 - script: |
     sudo npm install -g
-    sudo npm run build
     sudo npm run test
 - task: PublishTestResults@2
   inputs:
