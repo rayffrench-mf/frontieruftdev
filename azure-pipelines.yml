@@ -17,8 +17,8 @@ steps:
   displayName: 'Installing the Node.js into the ubuntu-latest image'
 
 - script: |
-    sudo npm install -g
-    sudo npm run test
+    npm install -g
+    npm run test
 - task: PublishTestResults@2
   inputs:
     testResultsFormat: 'JUnit'
