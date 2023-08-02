@@ -14,12 +14,10 @@ steps:
 - task: NodeTool@0
   inputs:
     versionSpec: '10.x'
-  displayName: 'Install Node.js'
+  displayName: 'Installing the Node.js into the ubuntu-latest image'
 
 - script: |
-
     sudo npm install -g
-    npm run
     sudo npm run build
     sudo npm run test
 - task: PublishTestResults@2
