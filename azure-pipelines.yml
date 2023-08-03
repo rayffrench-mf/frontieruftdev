@@ -8,7 +8,10 @@ trigger:
 - master
 
 pool:
-  vmImage: windows-latest
+  name: localwindows
+
+jobs:
+- job: BuildJob
 
 steps:
 - task: NodeTool@0
