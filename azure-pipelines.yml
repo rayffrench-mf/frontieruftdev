@@ -10,9 +10,6 @@ trigger:
 pool:
   name: localwindows
 
-jobs:
-- job: BuildJob
-
 steps:
 - task: NodeTool@0
   inputs:
