@@ -17,13 +17,14 @@ steps:
   displayName: 'Installing the Node.js into the local windows'
 
 - script: |
-    echo  '$(System.DefaultWorkingDirectory)'
-      dir
-      dir subfoldername
-    npm install -g
-    npm run test
+       npm install -g
+        echo '$(System.DefaultWorkingDirectory)'
+          dir
+          dir subfoldername
+          cd '$(System.DefaultWorkingDirectory)'/s
+        npm run test
 - task: PublishTestResults@2
   inputs:
     testResultsFormat: 'JUnit'
-    testResultsFiles: '**/TEST-*.xml'
-  displayName: 'npm install and build'
+    testResultsFiles: '**/RunResults*.xml'
+  displayName: 'Publish the Test results'
