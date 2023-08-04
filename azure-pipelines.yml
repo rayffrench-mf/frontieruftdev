@@ -21,9 +21,8 @@ steps:
   displayName: 'npm install'
 
 - script: |
-    npm run build
     npm run test
-  displayName: 'npm build'
+  displayName: 'npm test'
 
 - task: PublishTestResults@2
   inputs:
