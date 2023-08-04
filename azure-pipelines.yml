@@ -18,10 +18,9 @@ steps:
 
 - script: 
        npm install -g
-        echo '$(System.DefaultWorkingDirectory)'
-          dir
-          dir subfoldername
-          cd '$(System.DefaultWorkingDirectory)'/s
+        echo '$(System.DefaultWorkingDirectory)';
+          dir;
+          cd '$(System.DefaultWorkingDirectory)'/s;
           npm run test
 - task: PublishTestResults@2
   inputs:
