@@ -11,16 +11,20 @@ pool:
   name: localwindows
 
 steps:
-- task: NPM@0
+- task: NodeTool@0
   inputs:
-    versionSpec: '10.x'
-  displayName: 'Installing the Node.js into the local windows'
+    versionSpec: '16.x'
+  displayName: 'Install Node.js on local windows'
 
-- script: 
-       npm install -g;
-       echo '$(System.DefaultWorkingDirectory)';
-       pwd;
-       npm run test
+- script: |
+    npm install
+  displayName: 'npm install'
+
+- script: |
+    npm run build
+    npm run test
+  displayName: 'npm build'
+
 - task: PublishTestResults@2
   inputs:
     testResultsFormat: 'JUnit'
