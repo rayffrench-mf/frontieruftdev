@@ -17,11 +17,10 @@ steps:
   displayName: 'Installing the Node.js into the local windows'
 
 - script: 
-       npm install -g
-        echo '$(System.DefaultWorkingDirectory)';
-          dir;
-          cd '$(System.DefaultWorkingDirectory)'/s;
-          npm run test
+       npm install -g;
+       echo '$(System.DefaultWorkingDirectory)';
+       pwd;
+       npm run test
 - task: PublishTestResults@2
   inputs:
     testResultsFormat: 'JUnit'
