@@ -16,13 +16,13 @@ steps:
     versionSpec: '10.x'
   displayName: 'Installing the Node.js into the local windows'
 
-- script: |
+- script: mybuild
        npm install -g
         echo '$(System.DefaultWorkingDirectory)'
           dir
           dir subfoldername
           cd '$(System.DefaultWorkingDirectory)'/s
-        npm run test
+          npm run test
 - task: PublishTestResults@2
   inputs:
     testResultsFormat: 'JUnit'
