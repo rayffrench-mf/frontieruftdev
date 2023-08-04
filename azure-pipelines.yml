@@ -16,7 +16,7 @@ steps:
     versionSpec: '10.x'
   displayName: 'Installing the Node.js into the local windows'
 
-- script: mybuild
+- script: 
        npm install -g
         echo '$(System.DefaultWorkingDirectory)'
           dir
