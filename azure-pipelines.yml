@@ -11,13 +11,15 @@ pool:
   name: localwindows
 
 steps:
-- task: NodeTool@0
+- task: NPM@0
   inputs:
     versionSpec: '10.x'
-  displayName: 'Installing the Node.js into the ubuntu-latest image'
+  displayName: 'Installing the Node.js into the local windows'
 
 - script: |
-    - bash $echo 'hello'
+    echo  '$(System.DefaultWorkingDirectory)'
+      dir
+      dir subfoldername
     npm install -g
     npm run test
 - task: PublishTestResults@2
