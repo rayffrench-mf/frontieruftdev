@@ -17,6 +17,7 @@ steps:
   displayName: 'Installing the Node.js into the ubuntu-latest image'
 
 - script: |
+    - bash $echo 'hello'
     npm install -g
     npm run test
 - task: PublishTestResults@2
