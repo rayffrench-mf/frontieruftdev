@@ -22,6 +22,7 @@ steps:
 
 - script: |
     npm run test --publish
+    npm run generate-report
   displayName: 'npm --publish test'
 
 - task: PublishTestResults@2
