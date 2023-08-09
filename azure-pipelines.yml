@@ -8,7 +8,7 @@ trigger:
 - master
 
 pool:
-  name: localwindows
+  name: NimbusClient2023R3
 
 steps:
 - task: NodeTool@0
