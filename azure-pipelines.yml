@@ -28,6 +28,6 @@ steps:
 - task: PublishTestResults@2
   inputs:
     testResultsFormat: 'JUnit'
-    testResultsFiles: '**/RunResults/*.xml'
+    testResultsFiles: '**/reports/junit_style_report.xml'
     searchFolder: .
   displayName: 'Publish the Test results'

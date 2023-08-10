@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "cucumber-js"
+    "test": "cucumber-js --format junit:./reports/junit_style_report.xml"
   },
   "author": "",
   "license": "ISC",
