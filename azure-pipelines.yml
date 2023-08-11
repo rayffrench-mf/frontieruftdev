@@ -33,5 +33,5 @@ steps:
 
 - task: PublishBuildArtifacts@1
   inputs:
-    pathToPublish: '**/RunResults/'
+    pathToPublish: 'RunResults/'
     artifactName: HtmlReport
