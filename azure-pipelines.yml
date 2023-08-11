@@ -35,4 +35,5 @@ steps:
   inputs:
     pathToPublish: 'RunResults/'
     artifactName: runresults.html
+    publishLocation: Container
     displayName: 'Publish UFT Developer HTML Report'
