@@ -23,7 +23,7 @@ steps:
 - script: |
     npm run test --publish
     npm run generate-report
-  displayName: 'npm --publish test'
+  displayName: 'npm --publish test results'
 
 - task: PublishTestResults@2
   inputs:
