@@ -33,4 +33,4 @@ steps:
 
 - task: PublishHtmlReport@1
   inputs:
-    reportDir: 'RunResults'
+    reportDir: 'RunResults/runresults.html'
