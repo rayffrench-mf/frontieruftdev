@@ -31,9 +31,6 @@ steps:
     testResultsFiles: '**/reports/junit_style_report.xml'
     searchFolder: .
 
-- task: PublishBuildArtifacts@1
+- task: PublishHtmlReport@1
   inputs:
-    pathToPublish: 'RunResults/'
-    artifactName: runresults.html
-    publishLocation: Container
-    displayName: 'Publish UFT Developer HTML Report'
+    reportDir: 'RunResults'
