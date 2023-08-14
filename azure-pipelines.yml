@@ -34,4 +34,4 @@ steps:
 - task: PublishHtmlReport@1
   inputs:
     reportDir: 'RunResults/runresults.html'
-    tabName: 'UFTDeveloper'
+    tabName: 'UFT Developer Results'
